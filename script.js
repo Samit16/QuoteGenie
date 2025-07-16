@@ -10,6 +10,8 @@ const favsList = document.getElementById('favs-list');
 
 // Load saved favorites from localStorage
 let favorites = JSON.parse(localStorage.getItem('favoriteQuotes')) || [];
+let lastQuoteIndex = -1; // Track last quote to avoid repetition
+let currentCategory = ''; // Track current category
 
 // Fallback quotes database organized by category
 const quotesDatabase = {
@@ -188,9 +190,25 @@ function removeFavorite(index) {
 }
 
 // Event listeners
-window.onload = fetchQuote;
+window.onload = function() {
+    // Show initial message instead of fetching quote
+    quoteText.textContent = 'Select a category and click "New Quote" to get inspired!';
+    quoteAuthor.textContent = '';
+};
 newQuoteBtn.addEventListener('click', fetchQuote);
-tagSelect.addEventListener('change', fetchQuote); // Fetch new quote when category changes
+tagSelect.addEventListener('change', function() {
+    // Reset last quote index when category changes
+    lastQuoteIndex = -1;
+    currentCategory = tagSelect.value;
+    // Only fetch quote if category is selected
+    if (tagSelect.value) {
+        fetchQuote();
+    } else {
+        quoteText.textContent = 'Select a category and click "New Quote" to get inspired!';
+        quoteAuthor.textContent = '';
+        window.currentQuote = null;
+    }
+});
 copyBtn.addEventListener('click', copyQuote);
 saveBtn.addEventListener('click', saveQuote);
 viewFavsBtn.addEventListener('click', toggleFavorites);
