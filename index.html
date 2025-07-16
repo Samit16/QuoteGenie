@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quote Genie</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400..700;1,400..700&family=Playfair+Display:wght@400..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Quote Genie</h1>
+        <div id="quote-box">
+            <p id="quote-text">Click the button to get inspired!</p>
+      <p id="quote-author"></p>
+        </div>
+        <div class="controls">
+        <select id="tag-select">
+            <option value="">All</option>
+            <option value="inspirational">Inspirational</option>
+            <option value="wisdom">Wisdom</option>
+            <option value="technology">Technology</option>
+            <option value="life">Life</option>
+        </select>
+      <button id="new-quote">New Quote</button>
+      <button id="copy">Copy</button>
+      <button id="save">Save</button>
+      <button id="view-favs">❤️Favorites</button>
+        </div>
+        <div id="favorites-section" style="display: none;">
+      <h2>Your Saved Quotes</h2>
+      <ul id="favs-list"></ul>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
