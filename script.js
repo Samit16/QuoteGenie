@@ -8,12 +8,10 @@ const viewFavsBtn = document.getElementById('view-favs');
 const favoritesSection = document.getElementById('favorites-section');
 const favsList = document.getElementById('favs-list');
 
-// Load saved favorites from localStorage
 let favorites = JSON.parse(localStorage.getItem('favoriteQuotes')) || [];
-let usedQuotes = new Set(); // Track used quotes to prevent repetition
-let currentCategory = ''; // Track current category
+let usedQuotes = new Set();
+let currentCategory = ''; 
 
-// Fallback quotes database organized by category
 const quotesDatabase = {
     inspirational: [
         { text: "The only way to do great work is to love what you do.", author: "Steve Jobs" },
@@ -65,7 +63,6 @@ const quotesDatabase = {
     ]
 };
 
-// Get all quotes for "All" category
 function getAllQuotes() {
     return Object.values(quotesDatabase).flat();
 }
@@ -73,7 +70,6 @@ function getAllQuotes() {
 function fetchQuote() {
     const selectedTag = tagSelect.value;
     
-    // Get quotes based on selected category
     let quotesToUse;
     if (selectedTag && quotesDatabase[selectedTag]) {
         quotesToUse = quotesDatabase[selectedTag];
@@ -81,58 +77,47 @@ function fetchQuote() {
         quotesToUse = getAllQuotes();
     }
     
-    // Reset used quotes if we've used them all
     if (usedQuotes.size >= quotesToUse.length) {
         usedQuotes.clear();
     }
     
-    // Find unused quotes
     const unusedQuotes = quotesToUse.filter(quote => 
         !usedQuotes.has(`${quote.text}|${quote.author}`)
     );
     
-    // If no unused quotes, use all quotes (shouldn't happen with reset above)
     const availableQuotes = unusedQuotes.length > 0 ? unusedQuotes : quotesToUse;
     
-    // Select random quote from available quotes
     const randomQuote = availableQuotes[Math.floor(Math.random() * availableQuotes.length)];
-    
-    // Mark this quote as used
+
     usedQuotes.add(`${randomQuote.text}|${randomQuote.author}`);
     
     displayQuote(randomQuote.text, randomQuote.author);
 }
 
 function displayQuote(text, author) {
-    // Remove animation classes
+   
     quoteText.classList.remove('fade-in');
     quoteAuthor.classList.remove('fade-in');
 
-    // Force reflow
     void quoteText.offsetWidth;
     void quoteAuthor.offsetWidth;
 
-    // Update quote content
     quoteText.textContent = `"${text}"`;
     quoteAuthor.textContent = `— ${author}`;
 
-    // Add animation classes
     quoteText.classList.add('fade-in');
     quoteAuthor.classList.add('fade-in');
-    
-    // Store current quote for saving
+
     window.currentQuote = {
         text: text,
         author: author
     };
 }
 
-// Copy quote to clipboard
 function copyQuote() {
     if (window.currentQuote) {
         const quoteString = `"${window.currentQuote.text}" — ${window.currentQuote.author}`;
         
-        // Use modern clipboard API with fallback
         if (navigator.clipboard && navigator.clipboard.writeText) {
             navigator.clipboard.writeText(quoteString).then(() => {
                 copyBtn.textContent = 'Copied!';
@@ -141,22 +126,20 @@ function copyQuote() {
                 }, 2000);
             }).catch(err => {
                 console.error('Failed to copy quote:', err);
-                // Fallback method
+                
                 fallbackCopyTextToClipboard(quoteString);
             });
         } else {
-            // Fallback for older browsers
+            
             fallbackCopyTextToClipboard(quoteString);
         }
     }
 }
 
-// Fallback copy method for older browsers
 function fallbackCopyTextToClipboard(text) {
     const textArea = document.createElement('textarea');
     textArea.value = text;
-    
-    // Avoid scrolling to bottom
+   
     textArea.style.top = '0';
     textArea.style.left = '0';
     textArea.style.position = 'fixed';
@@ -187,7 +170,6 @@ function fallbackCopyTextToClipboard(text) {
     document.body.removeChild(textArea);
 }
 
-// Save quote to favorites
 function saveQuote() {
     if (window.currentQuote) {
         const quoteExists = favorites.some(fav => 
@@ -209,8 +191,6 @@ function saveQuote() {
         }
     }
 }
-
-// Toggle favorites display
 function toggleFavorites() {
     if (favoritesSection.style.display === 'none') {
         displayFavorites();
@@ -222,7 +202,6 @@ function toggleFavorites() {
     }
 }
 
-// Display favorites list
 function displayFavorites() {
     favsList.innerHTML = '';
     favorites.forEach((quote, index) => {
@@ -238,16 +217,14 @@ function displayFavorites() {
     });
 }
 
-// Remove favorite quote
 function removeFavorite(index) {
     favorites.splice(index, 1);
     localStorage.setItem('favoriteQuotes', JSON.stringify(favorites));
     displayFavorites();
 }
 
-// Event listeners
 window.onload = function() {
-    // Show initial message instead of fetching quote
+    
     quoteText.textContent = 'Select a category and click "New Quote" to get inspired!';
     quoteAuthor.textContent = '';
 };
@@ -255,10 +232,10 @@ window.onload = function() {
 newQuoteBtn.addEventListener('click', fetchQuote);
 
 tagSelect.addEventListener('change', function() {
-    // Reset used quotes when category changes
+    
     usedQuotes.clear();
     currentCategory = tagSelect.value;
-    // Only fetch quote if category is selected
+    
     if (tagSelect.value) {
         fetchQuote();
     } else {
