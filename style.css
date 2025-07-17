@@ -61,18 +61,24 @@ h1 {
 }
 button,select {
     padding: 10px 15px;
-    font-size: 1rem;
-    border: none;
-    border-radius: 8px;
+    font-size: 1.25rem;
+    font-weight: 100;
+    border: 1px solid rgba(255,255,255,0.15);
+    border-radius: 12px;
     cursor: pointer;
-    background-color: #ffffffcc;
-    transition:background 0.2s ease-in-out;
+    background: rgba(185, 184, 184, 0.61);
+    backdrop-filter: blur(5px);
+    box-shadow:0 4px 20px rgba(255, 255, 255, 0.05);
+    transition:all 0.3s ease-in-out;
     font-family: 'Lora', serif;
+    display: flex;
+    align-items: center;
+    gap: 8px;
 }
 button:hover, select:hover {
-    background-color: #ffffff99;
+    background: rgba(255, 255, 255, 0.829);
     box-shadow: 0 0px 10px rgba(14, 13, 13, 0.2);    
-    transform: translateY(2.5px);
+    transform: translateY(2.5px) scale(1.03);
     transition: transform 0.25s ease-in-out;
     color: #000;
 }
