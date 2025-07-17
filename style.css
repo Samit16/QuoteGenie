@@ -129,9 +129,6 @@ button:active, select:active {
         width: 100%;
         margin-bottom: 10px;
     }
-    .header-illustration {
-        max-width: 120px;
-    }
 }
 .fade-in {
     animation: fadeIn 0.6s ease-in-out;
@@ -147,24 +144,4 @@ button:active, select:active {
 }
 button:active {
     animation: pressEffect 0.2s ease;
-}
-.header-illustration {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  margin-bottom: 10px;
-  max-width: 160px;
-  margin-inline: auto;
-  opacity: 0.85;
-  transition: transform 0.3s ease, opacity 0.3s ease;
-}
-.header-illustration img {
-  width: 100%;
-  height: auto;
-  max-height: 100px;
-  object-fit: contain;
-}
-.header-illustration:hover {
-    transform: scale(1.05);
-    opacity: 1;
 }
