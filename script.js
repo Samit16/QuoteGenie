@@ -207,10 +207,10 @@ function displayFavorites() {
     favorites.forEach((quote, index) => {
         const li = document.createElement('li');
         li.innerHTML = `
-            <div style="margin-bottom: 10px; padding: 10px; background: rgba(255,255,255,0.1); border-radius: 5px;">
+             <div style="margin-bottom: 10px; padding: 15px; background: rgba(255,255,255,0.12); border-radius: 10px; backdrop-filter: blur(5px); border: 1px solid rgba(255,255,255,0.1);">
                 <p style="margin: 0; font-style: italic;">"${quote.text}"</p>
                 <p style="margin: 5px 0 0 0; font-weight: bold;">— ${quote.author}</p>
-                <button onclick="removeFavorite(${index})" style="margin-top: 5px; padding: 5px 10px; background: #ff4444; color: white; border: none; border-radius: 3px; cursor: pointer;">Remove</button>
+                <button onclick="removeFavorite(${index})" style="margin-top: 5px; padding: 6px 12px; background: rgba(255, 69, 58, 0.2); border: 1px solid rgba(255,69,58,0.4); color: white; border-radius: 5px; cursor: pointer; font-size: 0.9rem;">❌ Remove</button>
             </div>
         `;
         favsList.appendChild(li);

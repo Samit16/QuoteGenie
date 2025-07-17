@@ -92,7 +92,10 @@ button:active, select:active {
     overflow-y: auto;
     padding: 10px;
     background-color:  rgba(134, 131, 131, 0.2);
-    border-radius: 8px;
+    border-radius: 15px;
+    backdrop-filter: blur(5px);
+    border:1px solid rgba(255, 255, 255, 0.12);
+    padding: 15px;
     color:#f5f1f1;
     text-align: center;
     font-family: 'Lora', serif;
@@ -125,4 +128,12 @@ button:active, select:active {
 @keyframes fadeIn {
    0% {opacity: 0; transform: translateY(10px);}
    100% {opacity: 1; transform: translateY(0);}
+}
+@keyframes pressEffect {
+    0% {transform: scale(1);}
+    50% {transform: scale(0.95);}
+    100% {transform: scale(1);}
+}
+button:active {
+    animation: pressEffect 0.2s ease;
 }
