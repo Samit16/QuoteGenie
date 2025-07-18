@@ -1,9 +1,4 @@
-# ✨ QuoteGenie <!-- Animated Lottie Heading -->
-<p align="center">
-  <a href="https://lottiefiles.com/animated-icons">
-    <img src="https://lottie.host/9e297796-6100-4c71-8064-5c816a4dd67f/R4n08DK43i.lottie" alt="Magic Lamp Animation" width="80" />
-  </a>
-</p>
+# ✨ QuoteGenie
 
 > *"A good quote can change your mood. A great one can change your mindset."*  
 > — The Project Philosophy
@@ -19,12 +14,8 @@
 ---
 
 ## 🚀 Live Demo
-<p align="center">
-  <a href="https://quote-genie.vercel.app/">
-    <img src="https://lottie.host/35be9d8f-2e3d-4e18-9e7c-157c4c1e6c1d/6D5d0K0QtQ.json" alt="Animated Arrow" width="48"/>
-  </a>
-</p>
-🎯 Try it now → [quote-genie.vercel.app](https://quote-genie.vercel.app/)
+
+🎯 Try it now → [QuoteGenie](https://quote-genie.vercel.app/)
 
 ---
 
