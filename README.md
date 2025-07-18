@@ -65,3 +65,20 @@
 | unDraw / Storyset   | SVG illustrations              |
 | Shields.io          | Markdown badges                |
 | Claude AI           | Debugging Assistant            |
+---
+ ## 🎨 Design Decisions
+ -  Fonts chosen for luxury & legibility
+ -  Used varying glassmorphism intensity across buttons & sections
+ -  Buttons & containers animate on hover for micro-feedback
+ -  Background is mindscape-inspired with a dreamy overlay
+ ---
+ ## 📄 License
+ This project is licensed under the *MIT* License — feel free to use it in your portfolio or tweak it!
+ ---
+ ## 💭 Final Words
+"Not all those who wander are lost — but those without great READMEs usually are."
+
+If this helped you, don’t forget to leave a ⭐
+Made with logic, design & a sprinkle of AI ✨.
+---
+> Built by Samit
