@@ -1,7 +1,7 @@
 # ✨ QuoteGenie <!-- Animated Lottie Heading -->
 <p align="center">
   <a href="https://lottiefiles.com/animated-icons">
-    <img src="https://lottie.host/59b619b6-4dc2-4e8a-ae16-6b6b54a8c7f8/6d0o0GH9bB.json" alt="Magic Lamp Animation" width="80" />
+    <img src="https://lottie.host/9e297796-6100-4c71-8064-5c816a4dd67f/R4n08DK43i.lottie" alt="Magic Lamp Animation" width="80" />
   </a>
 </p>
 
