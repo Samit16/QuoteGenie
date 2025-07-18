@@ -3,7 +3,7 @@
 > *"A good quote can change your mood. A great one can change your mindset."*  
 > — The Project Philosophy
 
-[![Live Site](https://img.shields.io/website?down_message=offline&label=Live%20Demo&up_message=online&url=https%3A%2F%2Fyour-live-link.com)](https://your-live-link.com)  
+[![Live Site](https://img.shields.io/website?down_message=offline&label=Live%20Demo&up_message=online&url=https%3A%2F%2Fyour-live-link.com)](https://quote-genie.vercel.app/)  
 ![HTML5](https://img.shields.io/badge/HTML-E34F26?style=for-the-badge&logo=html5&logoColor=white)
 ![CSS3](https://img.shields.io/badge/CSS-1572B6?style=for-the-badge&logo=css3&logoColor=white)
 ![JavaScript](https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black)
@@ -27,7 +27,7 @@
 
 ## 📌 Overview
 
-**QuoteGenie Pro** is a minimalist yet stylish quote generator app, built purely with HTML, CSS, and vanilla JavaScript. Designed to uplift your mood, calm your mind, and give you a break from noise.
+**QuoteGenie** is a minimalist yet stylish quote generator app, built purely with HTML, CSS, and vanilla JavaScript. Designed to uplift your mood, calm your mind, and give you a break from noise.
 
 ---
 
@@ -42,14 +42,26 @@
 
 ---
 
-## 🖼️ Preview
+## 📂 Folder Structure
 
-> Add real screenshots in `./screenshots/`
-
-![Desktop Screenshot](./screenshots/desktop-view.png)
-![Mobile Screenshot](./screenshots/mobile-view.png)
+┣ 📜bg2.jpg
+┣ 📜index.html
+┣ 📜README.md
+┣ 📜script.js
+┣ 📜style.css
 
 ---
 
-## 📂 Folder Structure
+## 🛠 Tech Stack
 
+| Resource            | Purpose                        |
+|---------------------|--------------------------------|
+| HTML5               | Structure and content          |
+| CSS3                | Custom layout, effects         |
+| JavaScript          | Interactivity, logic, and animation|
+| Google Fonts        | Typography                     |
+| Lordicon            | Button icons                   | 
+| LottieFiles         | Optional UI animations         |
+| unDraw / Storyset   | SVG illustrations              |
+| Shields.io          | Markdown badges                |
+| Claude AI           | Debugging Assistant            |
