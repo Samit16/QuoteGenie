@@ -27,23 +27,13 @@
 
 ## ✨ Features
 
-<div align="left">
-  <img src="https://lottie.host/7f8c7a49-5e3e-4bc1-aedc-bb4a8e8e4a23/Ov5iFUDUoD.json" width="36" alt="Star Animation" style="vertical-align:middle;"/>
-  <strong>Tag Filter:</strong> Choose from <em>Inspirational</em>, <em>Wisdom</em>, <em>Technology</em>, and <em>Life</em> <br>
-  <img src="https://lottie.host/6af8b8b6-7c5a-4b12-9cfc-b6f3e3e6e1d2/BWzNw6wLwJ.json" width="36" alt="Dice Animation" style="vertical-align:middle;"/>
-  <strong>Smart Randomizer:</strong> Non-repeating quote logic <br>
-  <img src="https://lottie.host/2e387c6e-73e6-44e4-bae5-7f3ba0ec1e5f/DMgA5QwJqC.json" width="36" alt="Heart Animation" style="vertical-align:middle;"/>
-  <strong>Favorites:</strong> Save your favorite quotes in browser storage <br>
-  <img src="https://lottie.host/6e1b8ebb-9d21-4b5a-97e6-45f5e5b8e7c2/kXyZvCxwRr.json" width="36" alt="Copy Animation" style="vertical-align:middle;"/>
-  <strong>Copy Button:</strong> One-click clipboard copy with animation <br>
-  <img src="https://lottie.host/ea87e328-7e25-43b2-8d64-cd3127f2ba3c/0VvZg5M9rV.json" width="36" alt="Phone Animation" style="vertical-align:middle;"/>
-  <strong>Responsive:</strong> Mobile-first fluid design <br>
-  <img src="https://lottie.host/7e1f8c7b-2d5c-4e5c-9e8e-4b2c6e2e1d2d/3nVg7QvM8N.json" width="36" alt="Blur Glow Animation" style="vertical-align:middle;"/>
-  <strong>Glassmorphism:</strong> Subtle blur-glow cards with varied styling <br>
-  <img src="https://lottie.host/3e1f7e8a-2d5b-4e3b-9e2b-7e5f8e5e1d2b/5qYg5QxM2N.json" width="36" alt="Animation" style="vertical-align:middle;"/>
-  <strong>Animated UI:</strong> Buttons & cards animate on hover for micro-feedback <br>
-</div>
-
+- **Tag Filter**: Choose from <em>Inspirational</em>, <em>Wisdom</em>, <em>Technology</em>, and <em>Life</em>
+- **Smart Randomizer**: Non-repeating quote logic
+- **Favorites**: Save your favorite quotes in browser storage
+- **Copy Button**: One-click clipboard copy with animation
+- **Responsive**: Mobile-first fluid design
+- **Glassmorphism**: Subtle blur-glow cards with varied styling
+- **Animated UI**: Buttons & cards animate on hover for micro-feedback
 ---
 
 ## 📂 Folder Structure
