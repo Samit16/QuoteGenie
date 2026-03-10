@@ -19,7 +19,7 @@ body::before {
     pointer-events: none;
 }
 .container {
-    backdrop-filter: blur(3px);
+    backdrop-filter: blur(4px);
     background: rgba(0, 0, 0, 0.1);
     border-radius: 18px;
     padding: 20px;
